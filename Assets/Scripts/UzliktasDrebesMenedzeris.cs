@@ -10,6 +10,16 @@ public class UzliktasDrebesMenedzeris : MonoBehaviour
 
     private Dictionary<string, GameObject> uzliktasDrebes = new Dictionary<string, GameObject>();
 
+
+    public void NotirtVisiDrebes()
+    {
+        foreach (var kvp in uzliktasDrebes)
+        {
+            if (kvp.Value != null)
+                Destroy(kvp.Value);
+        }
+        uzliktasDrebes.Clear();
+    }
     void Awake()
     {
         Instance = this;
@@ -25,6 +35,8 @@ public class UzliktasDrebesMenedzeris : MonoBehaviour
             Destroy(uzliktasDrebes[kat]);
             uzliktasDrebes.Remove(kat);
         }
+
+
 
         // Izveido kopiju uz canvas
         GameObject kopija = Instantiate(source.gameObject, canvas.transform);

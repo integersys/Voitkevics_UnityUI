@@ -11,6 +11,15 @@ public class DrebjuKategorijuMenedzeris : MonoBehaviour
         Instance = this;
     }
 
+    public void AizverstVisas()
+    {
+        if (currentActive != null)
+        {
+            currentActive.SetOpen(false);
+            currentActive = null;
+        }
+    }
+
     public void OnCategoryClicked(DrebjuKategorijuPoga clicked)
     {
         if (currentActive == clicked)

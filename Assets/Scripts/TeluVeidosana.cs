@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 
-public class VarduIevade : MonoBehaviour
+public class TeluVeidosana : MonoBehaviour
 {
     [Header("Input Lauki")]
     public TMP_InputField vardsInputField;
@@ -11,17 +11,18 @@ public class VarduIevade : MonoBehaviour
     [Header("Izvades teksts")]
     public TextMeshProUGUI rezultatsTeksts;
 
+    [Header("Dropdown")]
+    public TMP_Dropdown characterDropdown; // Ievelc IzveletiesTelu dropdown
+
     private const int MIN_GADS = 1926;
 
     void Start()
     {
         vardsInputField.characterLimit = 15;
         vardsInputField.onValueChanged.AddListener(FiltretVardu);
-
         gadsInputField.characterLimit = 4;
         gadsInputField.contentType = TMP_InputField.ContentType.IntegerNumber;
         gadsInputField.ForceLabelUpdate();
-
         rezultatsTeksts.text = "";
     }
 
@@ -33,7 +34,6 @@ public class VarduIevade : MonoBehaviour
             if (char.IsLetter(c))
                 tikai_burti += c;
         }
-
         if (tikai_burti != ievade)
         {
             vardsInputField.text = tikai_burti;
@@ -71,6 +71,10 @@ public class VarduIevade : MonoBehaviour
         }
 
         int vecums = System.DateTime.Now.Year - dzimsanasGads;
-        rezultatsTeksts.text = $"Kvadrātbiksis {vards} ir {vecums} gadus vecs!";
+
+        bool isPatrick = characterDropdown.value == 1;
+        string tituls = isPatrick ? "Zvaigzne" : "Kvadrātbiksis";
+
+        rezultatsTeksts.text = $"{tituls} {vards} ir {vecums} gadus vecs!";
     }
 }
