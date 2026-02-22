@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 8fc856da28c8bfb43a0f99a788a3fc4c
+guid: 78c6cbb9d12f94443bc54b79de48fb0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2692808250073719908
-    second: Kurpes1_0
+      213: -9189721141101133219
+    second: Kurpes3_0
   - first:
-      213: -718650752406088320
-    second: Kurpes1_1
+      213: -3103620822313946272
+    second: Kurpes3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kurpes1_0
+      name: Kurpes3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 108
+        width: 44
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9b5d16e92931aad0800000000000000
-      internalID: -2692808250073719908
+      spriteID: d5205c7bf4d877080800000000000000
+      internalID: -9189721141101133219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kurpes1_1
+      name: Kurpes3_1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 7
-        width: 58
-        height: 110
+        x: 71
+        y: 3
+        width: 48
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0859441c2f6d606f0800000000000000
-      internalID: -718650752406088320
+      spriteID: 063b8784e49bde4d0800000000000000
+      internalID: -3103620822313946272
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kurpes1_0: -2692808250073719908
-      Kurpes1_1: -718650752406088320
+      Kurpes3_0: -9189721141101133219
+      Kurpes3_1: -3103620822313946272
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
