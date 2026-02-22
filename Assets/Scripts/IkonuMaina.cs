@@ -44,6 +44,11 @@ public class IkonuMaina : MonoBehaviour
     public Sprite sb_Closet;
     public Sprite p_Closet;
 
+    [Header("Poga")]
+    public GameObject poga;
+    public Sprite sb_Poga;
+    public Sprite p_Poga;
+
     [TextArea(5, 10)]
     public string spongeBobTeksts;
 
@@ -67,6 +72,7 @@ public class IkonuMaina : MonoBehaviour
         NomainitSprite(galvenaisTels, isPatrick ? p_GalvenaisTels : sb_GalvenaisTels);
         NomainitSprite(background, isPatrick ? p_Background : sb_Background);
         NomainitSprite(closet, isPatrick ? p_Closet : sb_Closet);
+        NomainitSprite(poga, isPatrick ? p_Poga : sb_Poga);
 
         if (scrollTeksts != null)
             scrollTeksts.text = isPatrick ? patriksTeksts : spongeBobTeksts;
