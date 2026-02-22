@@ -13,8 +13,6 @@ public class IkonuMaina : MonoBehaviour
     public GameObject ikona_Cepures;
     public GameObject ikona_Kurpes;
 
-
-
     [Header("SpongeBob Sprites")]
     public Sprite sb_Krekli;
     public Sprite sb_Bikses;
@@ -28,19 +26,23 @@ public class IkonuMaina : MonoBehaviour
     public Sprite p_Kurpes;
 
     [Header("Galvenais Tēls")]
-    public GameObject galvenaisTels; // Ievelc "GalvenaisTels" no hierarhijas
+    public GameObject galvenaisTels;
 
-    public Sprite sb_GalvenaisTels; // SpongeBob sprite
-    public Sprite p_GalvenaisTels;  // Patrick sprite
-
+    public Sprite sb_GalvenaisTels;
+    public Sprite p_GalvenaisTels;
 
     [Header("Scroll View Teksts")]
-    public TMP_Text scrollTeksts; // Ievelc "Text (TMP)" no InfoParTelu → Viewport → Content
+    public TMP_Text scrollTeksts;
 
     [Header("Background")]
     public GameObject background;
     public Sprite sb_Background;
     public Sprite p_Background;
+
+    [Header("Closet")]
+    public GameObject closet;
+    public Sprite sb_Closet;
+    public Sprite p_Closet;
 
     [TextArea(5, 10)]
     public string spongeBobTeksts;
@@ -64,11 +66,11 @@ public class IkonuMaina : MonoBehaviour
         NomainitSprite(ikona_Kurpes, isPatrick ? p_Kurpes : sb_Kurpes);
         NomainitSprite(galvenaisTels, isPatrick ? p_GalvenaisTels : sb_GalvenaisTels);
         NomainitSprite(background, isPatrick ? p_Background : sb_Background);
+        NomainitSprite(closet, isPatrick ? p_Closet : sb_Closet);
 
         if (scrollTeksts != null)
             scrollTeksts.text = isPatrick ? patriksTeksts : spongeBobTeksts;
     }
-
 
     void NomainitSprite(GameObject obj, Sprite jaunaisSprite)
     {
@@ -77,8 +79,14 @@ public class IkonuMaina : MonoBehaviour
             img = obj.GetComponentInChildren<Image>();
 
         if (img != null)
+        {
+            // Unity pats saglabās objekta esošo izmēru un pozīciju.
+            // Atliek tikai iedot jauno bildi.
             img.sprite = jaunaisSprite;
+        }
         else
+        {
             Debug.LogError("Image komponents nav atrasts: " + obj.name);
+        }
     }
 }

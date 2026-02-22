@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da8d06c9d6f016741b134c750945d82a
+guid: a258fa54686dec746bee715d65d3724c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5772857236661067798
-    second: PatrickBackground_0
+      213: 8031730261334284493
+    second: PatrickHouseInterior_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PatrickBackground_0
+      name: PatrickHouseInterior_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 610e932221f4d1050800000000000000
-      internalID: 5772857236661067798
+      spriteID: dc8d5966e10767f60800000000000000
+      internalID: 8031730261334284493
       vertices: []
       indices: 
       edges: []
