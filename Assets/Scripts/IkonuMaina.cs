@@ -65,6 +65,8 @@ public class IkonuMaina : MonoBehaviour
     {
         bool isPatrick = index == 1;
 
+        UzliktasDrebesMenedzeris.Instance.NotirtVisiDrebes();
+
         NomainitSprite(ikona_Krekli, isPatrick ? p_Krekli : sb_Krekli);
         NomainitSprite(ikona_Bikses, isPatrick ? p_Bikses : sb_Bikses);
         NomainitSprite(ikona_Cepures, isPatrick ? p_Cepures : sb_Cepures);
