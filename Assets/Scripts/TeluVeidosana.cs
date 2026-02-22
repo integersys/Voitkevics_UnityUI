@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-public class TeluVeidosana : MonoBehaviour
+public class VarduIevade : MonoBehaviour
 {
     [Header("Input Lauki")]
     public TMP_InputField vardsInputField;
@@ -10,27 +11,44 @@ public class TeluVeidosana : MonoBehaviour
     [Header("Izvades teksts")]
     public TextMeshProUGUI rezultatsTeksts;
 
-    private const int MAX_BURTI = 15;
     private const int MIN_GADS = 1926;
 
     void Start()
     {
-        // Automātiski atjaunina tekstu, mainoties ievadei
-        vardsInputField.characterLimit = MAX_BURTI;
-        vardsInputField.onValueChanged.AddListener(_ => Atjauninat());
-        gadsInputField.onValueChanged.AddListener(_ => Atjauninat());
+        vardsInputField.characterLimit = 15;
+        vardsInputField.onValueChanged.AddListener(FiltretVardu);
+
+        gadsInputField.characterLimit = 4;
+        gadsInputField.contentType = TMP_InputField.ContentType.IntegerNumber;
+        gadsInputField.ForceLabelUpdate();
 
         rezultatsTeksts.text = "";
     }
 
-    void Atjauninat()
+    void FiltretVardu(string ievade)
+    {
+        string tikai_burti = "";
+        foreach (char c in ievade)
+        {
+            if (char.IsLetter(c))
+                tikai_burti += c;
+        }
+
+        if (tikai_burti != ievade)
+        {
+            vardsInputField.text = tikai_burti;
+            vardsInputField.caretPosition = tikai_burti.Length;
+        }
+    }
+
+    public void UzSpiestPogu()
     {
         string vards = vardsInputField.text;
         string gadsText = gadsInputField.text;
 
         if (string.IsNullOrEmpty(vards) || string.IsNullOrEmpty(gadsText))
         {
-            rezultatsTeksts.text = "";
+            rezultatsTeksts.text = "Lūdzu ievadiet vārdu un dzimšanas gadu!";
             return;
         }
 
