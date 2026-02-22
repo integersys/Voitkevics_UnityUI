@@ -49,6 +49,13 @@ public class IkonuMaina : MonoBehaviour
     public Sprite sb_Poga;
     public Sprite p_Poga;
 
+    [Header("Kategoriju Teksti")]
+    public TMP_Text krekliTeksts;
+
+    [Header("")]
+    public string sb_KrekliTeksts = "Amuleti";
+    public string p_KrekliTeksts = "Krekli";
+
     [TextArea(5, 10)]
     public string spongeBobTeksts;
 
@@ -75,6 +82,9 @@ public class IkonuMaina : MonoBehaviour
         NomainitSprite(background, isPatrick ? p_Background : sb_Background);
         NomainitSprite(closet, isPatrick ? p_Closet : sb_Closet);
         NomainitSprite(poga, isPatrick ? p_Poga : sb_Poga);
+
+        if (krekliTeksts != null)
+            krekliTeksts.text = isPatrick ? p_KrekliTeksts : sb_KrekliTeksts;
 
         if (scrollTeksts != null)
             scrollTeksts.text = isPatrick ? patriksTeksts : spongeBobTeksts;
