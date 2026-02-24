@@ -950,6 +950,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 70fedec9962bafa49adb559932f483a3, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -1509,7 +1512,7 @@ GameObject:
   - component: {fileID: 363087536}
   - component: {fileID: 363087537}
   - component: {fileID: 363087540}
-  - component: {fileID: 363087539}
+  - component: {fileID: 363087541}
   m_Layer: 5
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -1645,24 +1648,6 @@ MonoBehaviour:
     piedz\u012Bvojumiem. Patriks ir Spongebob lab\u0101kais draugs, un abi kop\u0101
     vi\u0146i non\u0101k visda\u017E\u0101d\u0101kaj\u0101s smiekl\u012Bg\u0101s
     situ\u0101cij\u0101s."
---- !u!114 &363087539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363087531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e403ec345df6244fbb234715a037746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skana: {fileID: 0}
-  dropdown: {fileID: 855155489}
-  dropdownSkanas:
-  - {fileID: 8300000, guid: c2b9a16647c9c244089e4bc4a24e0485, type: 3}
-  - {fileID: 8300000, guid: ca539babfb0fe904fb0724bdc2180ac2, type: 3}
-  skalums: 1
 --- !u!82 &363087540
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1760,6 +1745,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &363087541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363087531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e403ec345df6244fbb234715a037746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skana: {fileID: 0}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
+  dropdown: {fileID: 855155489}
+  dropdownSkanas:
+  - {fileID: 8300000, guid: c2b9a16647c9c244089e4bc4a24e0485, type: 3}
+  - {fileID: 8300000, guid: ca539babfb0fe904fb0724bdc2180ac2, type: 3}
+  skalums: 1
 --- !u!1 &364328485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,7 +2454,7 @@ RectTransform:
   m_GameObject: {fileID: 547292275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364328486}
@@ -3041,7 +3047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4094029287428255604, guid: fd2003cd11336ec49860e94bfeb591c4, type: 3}
+  m_Sprite: {fileID: -724447736594742040, guid: d79bf96153393634f8aa5d5b9fd1bb38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3193,7 +3199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 140.19995}
+  m_AnchoredPosition: {x: -0.000030517578, y: 140.20058}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &791299787
@@ -4058,7 +4064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3921798139952223248, guid: b3c43303415c3994b92721dab80f9030, type: 3}
+  m_Sprite: {fileID: -3039430029220834891, guid: 1ea0333ff618ca54c86abe9733a2de20, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4085,7 +4091,7 @@ RectTransform:
   m_GameObject: {fileID: 890398376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364328486}
@@ -5242,6 +5248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 57a2c4fd3ce7cdd4eb505c7006facf99, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -5462,6 +5471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 57a2c4fd3ce7cdd4eb505c7006facf99, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -5667,6 +5679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 70fedec9962bafa49adb559932f483a3, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -5956,6 +5971,8 @@ GameObject:
   - component: {fileID: 1303433460}
   - component: {fileID: 1303433462}
   - component: {fileID: 1303433461}
+  - component: {fileID: 1303433464}
+  - component: {fileID: 1303433465}
   m_Layer: 5
   m_Name: GalvenaisTels
   m_TagString: Untagged
@@ -5996,7 +6013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6020,6 +6037,122 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303433459}
   m_CullTransparentMesh: 1
+--- !u!82 &1303433464
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303433459}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1303433465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303433459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e403ec345df6244fbb234715a037746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skana: {fileID: 0}
+  characterDropdown: {fileID: 855155489}
+  sb_Skana: {fileID: 8300000, guid: c869b7c8eebb975479b8ba345bbb211e, type: 3}
+  p_Skana: {fileID: 8300000, guid: ea76f96bcfbfac74f94d9895067cc1ec, type: 3}
+  dropdown: {fileID: 0}
+  dropdownSkanas: []
+  skalums: 1
 --- !u!1 &1304753881
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,6 +6535,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 57a2c4fd3ce7cdd4eb505c7006facf99, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -6952,6 +7088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 57a2c4fd3ce7cdd4eb505c7006facf99, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -7611,6 +7750,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 57a2c4fd3ce7cdd4eb505c7006facf99, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -9365,6 +9507,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skana: {fileID: 8300000, guid: 57a2c4fd3ce7cdd4eb505c7006facf99, type: 3}
+  characterDropdown: {fileID: 0}
+  sb_Skana: {fileID: 0}
+  p_Skana: {fileID: 0}
   dropdown: {fileID: 0}
   dropdownSkanas: []
   skalums: 1
@@ -9747,8 +9892,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1972166369}
   m_HandleRect: {fileID: 1972166368}
   m_Direction: 2
-  m_Value: 0.0000008706868
-  m_Size: 0.5326666
+  m_Value: -0.0000039180914
+  m_Size: 0.5326444
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10269,7 +10414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4094029287428255604, guid: fd2003cd11336ec49860e94bfeb591c4, type: 3}
+  m_Sprite: {fileID: -724447736594742040, guid: d79bf96153393634f8aa5d5b9fd1bb38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10296,7 +10441,7 @@ RectTransform:
   m_GameObject: {fileID: 2084852728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364328486}
