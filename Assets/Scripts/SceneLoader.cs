@@ -3,6 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject); 
+        }
+    }
+
     public void LoadScene(string sceneName)
     {
         if (string.IsNullOrEmpty(sceneName))
@@ -53,7 +68,6 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    // Papildus metodes ērtībai
     public void ReloadCurrentScene()
     {
         string current = SceneManager.GetActiveScene().name;

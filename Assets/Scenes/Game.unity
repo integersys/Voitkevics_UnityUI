@@ -1508,7 +1508,6 @@ GameObject:
   - component: {fileID: 363087535}
   - component: {fileID: 363087536}
   - component: {fileID: 363087537}
-  - component: {fileID: 363087538}
   - component: {fileID: 363087540}
   - component: {fileID: 363087539}
   m_Layer: 5
@@ -1646,18 +1645,6 @@ MonoBehaviour:
     piedz\u012Bvojumiem. Patriks ir Spongebob lab\u0101kais draugs, un abi kop\u0101
     vi\u0146i non\u0101k visda\u017E\u0101d\u0101kaj\u0101s smiekl\u012Bg\u0101s
     situ\u0101cij\u0101s."
---- !u!114 &363087538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363087531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6696df0f1961243498439a93e163fbf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &363087539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,7 +3193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 140.20007}
+  m_AnchoredPosition: {x: -0.000030517578, y: 140.19995}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &791299787
@@ -6830,6 +6817,7 @@ GameObject:
   - component: {fileID: 1448205040}
   - component: {fileID: 1448205044}
   - component: {fileID: 1448205043}
+  - component: {fileID: 1448205045}
   m_Layer: 5
   m_Name: AtpakalMainMenu
   m_TagString: Untagged
@@ -6901,7 +6889,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 363087538}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -7064,6 +7052,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1448205045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448205038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf42c69552e44242813ae604db58596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: MainMenu
 --- !u!1 &1449549417
 GameObject:
   m_ObjectHideFlags: 0
@@ -7315,7 +7316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -511.56, y: -40.136}
+  m_AnchoredPosition: {x: -197.36, y: 148.43}
   m_SizeDelta: {x: 323.8636, y: 215.3833}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1518648721
@@ -8421,7 +8422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1312067775202584179, guid: 995078d7fff1a1340b0bdd017d86a7d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29facff38ad86e24c8462f2e664c22ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8455,8 +8456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225.92, y: 16.817}
-  m_SizeDelta: {x: 351.1075, y: 365.0547}
+  m_AnchoredPosition: {x: -409.29, y: 0.000015259}
+  m_SizeDelta: {x: 502.5603, y: 352.6065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1768965372
 GameObject:
@@ -9746,8 +9747,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1972166369}
   m_HandleRect: {fileID: 1972166368}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.5326667
+  m_Value: 0.0000008706868
+  m_Size: 0.5326666
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
