@@ -3,30 +3,56 @@ using UnityEngine.UI;
 
 public class TelaIzmers : MonoBehaviour
 {
-    [Header("Spongebob tēls")]
-    public RectTransform spongebobRect;
+    public static TelaIzmers Instance; 
+
+    [Header("Tēla attēls")]
+    public RectTransform telsRect; 
 
     [Header("Slideri")]
     public Slider garumsSlider;
     public Slider platumsSlider;
 
     private Vector2 sakumaIzmers;
+    private bool ignoreSliderChange = false; 
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-        sakumaIzmers = spongebobRect.sizeDelta;
+        sakumaIzmers = telsRect.sizeDelta;
+
+        PielagotSlaiderus();
+
 
         garumsSlider.onValueChanged.AddListener(MainitGarumu);
         platumsSlider.onValueChanged.AddListener(MainitPlatumu);
     }
 
+    public void PielagotSlaiderus()
+    {
+        if (telsRect != null)
+        {
+            ignoreSliderChange = true; 
+
+            platumsSlider.value = telsRect.sizeDelta.x;
+            garumsSlider.value = telsRect.sizeDelta.y;
+
+            ignoreSliderChange = false;
+        }
+    }
+
     void MainitGarumu(float vertiba)
     {
-        spongebobRect.sizeDelta = new Vector2(spongebobRect.sizeDelta.x, vertiba);
+        if (ignoreSliderChange) return;
+        telsRect.sizeDelta = new Vector2(telsRect.sizeDelta.x, vertiba);
     }
 
     void MainitPlatumu(float vertiba)
     {
-        spongebobRect.sizeDelta = new Vector2(vertiba, spongebobRect.sizeDelta.y);
+        if (ignoreSliderChange) return;
+        telsRect.sizeDelta = new Vector2(vertiba, telsRect.sizeDelta.y);
     }
 }

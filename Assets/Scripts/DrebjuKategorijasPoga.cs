@@ -14,6 +14,9 @@ public class DrebjuKategorijuPoga : MonoBehaviour
     public GameObject p_Drebe2;
     public GameObject p_Drebe3;
 
+    [Header("Kategorijas iestatījumi")]
+    public string kategorijasNosaukums; // Šeit iekš Unity inspektora ieraksti, piemēram, "Bikses"
+
     private Toggle toggle;
 
     void Start()

@@ -39,6 +39,13 @@ public class DrebjuKategorijuMenedzeris : MonoBehaviour
             currentActive = null;
     }
 
+
+    public string IegutAktivoKategoriju()
+    {
+        if (currentActive != null)
+            return currentActive.kategorijasNosaukums;
+        return null;
+    }
     public void OnCategoryClicked(DrebjuKategorijuPoga clicked)
     {
         if (currentActive == clicked)
@@ -55,6 +62,9 @@ public class DrebjuKategorijuMenedzeris : MonoBehaviour
 
             clicked.SetOpen(true);
             currentActive = clicked;
+
+            if (DrebjuIzmeraMenedzeris.Instance != null)
+                DrebjuIzmeraMenedzeris.Instance.PielagotSlaiderusAktivajaiDrebei();
         }
     }
 }

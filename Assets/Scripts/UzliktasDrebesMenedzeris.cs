@@ -20,6 +20,17 @@ public class UzliktasDrebesMenedzeris : MonoBehaviour
         }
         uzliktasDrebes.Clear();
     }
+
+    public GameObject IegutUzliktoDrebi(string kategorija)
+    {
+        if (string.IsNullOrEmpty(kategorija)) return null;
+
+        if (uzliktasDrebes.TryGetValue(kategorija, out GameObject drebe))
+        {
+            return drebe;
+        }
+        return null;
+    }
     void Awake()
     {
         Instance = this;
@@ -50,6 +61,9 @@ public class UzliktasDrebesMenedzeris : MonoBehaviour
 
         kopija.transform.SetAsLastSibling();
         uzliktasDrebes[kat] = kopija;
+
+        if (DrebjuIzmeraMenedzeris.Instance != null)
+            DrebjuIzmeraMenedzeris.Instance.PielagotSlaiderusAktivajaiDrebei();
 
         return kopija;
     }
